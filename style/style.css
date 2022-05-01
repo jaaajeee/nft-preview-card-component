@@ -3,15 +3,15 @@ body {
     font-family: 'Outfit', sans-serif;
     color: hsl(0, 0%, 100%);
     font-size: 18px;
+    max-width: 1440px;
+    min-width: 375px;
 }
-
 
 /* desktop */
 @media only screen and (max-width: 1440px) {
     hr {
         width: 100%;
         border: 0.1px solid hsl(215, 51%, 70%);
-        
     }
     body {
         display: flex;
@@ -49,35 +49,54 @@ body {
         font-size: 16px;
         font-weight: 300;
         color: hsl(215, 51%, 70%);
-        margin: 8px, 8px, 8px, 8px;
+        margin-bottom: 0px;
+    }
+
+    .card-wrapper {
+        width: 100%;
+        position: relative;
     }
     
     .card-wrapper img {
-        margin-bottom: 12px;
+        margin-bottom: 15px;
+        display: block;
+        border: 0px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+
     }
 
     .card-content {
-        position: absolute; 
+        position: absolute;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: opacity 0.5s;
+        -ms-transform: translate(-50%, -50%);
+        height: auto;
+        width: auto;
+        opacity: 100%;
     }
 
-    /* .overlay {
+    .overlay {
         position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         height: 100%;
         width: 100%;
-        opacity: 0.5;
-        transition: .5s ease;
+        opacity: 0;
+        transition: 0.5s ease;
         background-color: hsl(178, 100%, 50%);
-    } */
+        border-radius: 10px;
+        border: 0px;
+    }
 
-    /* .card-wrapper:hover .card-content {
-        opacity: 1;
-        position: absolute;
-    } */
+    .card-wrapper:hover .overlay {
+        opacity: 0.6;
+    }
 
-  
     .price-box {
         display: flex;
         justify-content: space-between;
@@ -114,6 +133,7 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        margin-top: 15px;
     }
 
     .card-footer p {
