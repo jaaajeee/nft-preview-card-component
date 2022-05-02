@@ -149,6 +149,8 @@ body {
         border-style: solid; 
         color: hsl(215, 51%, 70%);
         margin-right: 10px;
+        width: 32px;
+        height: 32px;
     }
 
     .card-footer a {
